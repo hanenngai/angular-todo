@@ -11,3 +11,6 @@ The testing strategy for the application involved a multi-layered approach to en
 To implement these tests, Angular's testing framework was utilized for unit and integration testing. Jasmine, a behavior-driven development framework for testing JavaScript code, was employed to write clean and readable tests within Angular. For end-to-end testing, Cypress was chosen as the tool of choice. Cypress provided a powerful platform to simulate user interactions, such as clicks and form submissions, and assert the expected behavior of the application.
 
 Overall, this testing strategy ensured thorough validation of the application's functionality at different levels, from individual components to end-to-end user workflows, utilizing Angular's testing framework, Jasmine, and Cypress as essential tools.
+
+### Significant bugs or issues:
+- There were no significant bugs. However, there was an issue where the checkboxes for the items had to be force clicked, as the buttons were not visible on cypress. A quick eye-test will show that the checkboxes are very visible; however, this may cause problems later on when creating more tests.
