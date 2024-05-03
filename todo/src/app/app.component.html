@@ -41,7 +41,7 @@
   
   <ul>
     <li *ngFor="let i of items">
-      <app-item (remove)="remove(i)" [item]="i">{{ i | json }}</app-item>
+      <app-item (remove)="remove(i)" [item]="i"></app-item>
     </li>
   </ul>
 </div>
