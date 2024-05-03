@@ -28,6 +28,22 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('My To Do List');
   });
 
+  it('should show done items', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.filter = 'done';
+    fixture.detectChanges();
+    expect(app.items.length).toEqual(1);
+  });
+
+  it('should show todo items', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.filter = 'active';
+    fixture.detectChanges();
+    expect(app.items.length).toEqual(3);
+  });
+
   // integration tests
 
   it('should add new todo after todo creation', () => {
